@@ -1,25 +1,36 @@
 using System;
 
-class Fractions
+public class Fraction
 {
     private int _top;
     private int _bottom;
 
-    public Fractions()
+    public Fraction()
     {
         _top = 1;
         _bottom = 1;
     }
 
-    public Fractions(int wholeNumber)
+    public Fraction(int wholeNumber)
     {
         _top = wholeNumber;
         _bottom = 1;
     }
 
-    public Fractions(int _top, int _bottom)
+    public Fraction(int top, int bottom)
     {
-        _top = _top;
-        _bottom = _bottom;
+        _top = top;
+        _bottom = bottom;
+    }
+
+    public string GetFractionString()
+    {
+        string text = $"{_top}/{_bottom}";
+        return text;
+    }
+
+    public double GetDecimalValue()
+    {
+        return (double)_top / (double)_bottom;
     }
 }
