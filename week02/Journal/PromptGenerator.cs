@@ -2,20 +2,21 @@ using System;
 
 public class PromptGenerator
 {
-    public List<Entry> _prompts = new List<Entry>();
+    public List<string> prompts = new List<string>()
+    {"Who was the most interesting person I interacted with today?",
+    "What was the best part of my day?",
+    "How did I see the hand of the Lord in my life today?",
+    "What was the strongest emotion I felt today?",
+    "If I had one thing I could do over today, what would it be?"};
 
     public string GetRandomPrompt()
 
     {
         Random random = new Random();
-        int randomIndexNumber = random.Next(_prompts.Count);
-        Console.WriteLine(_prompts[randomIndexNumber]);
+        int randomIndexNumber = random.Next(prompts.Count);
+        string selectedPrompt = prompts[randomIndexNumber];
 
-        foreach (Entry prompt in _prompts)
-        {
-            prompt.Display();
-        }
-
-        return "";
+        Console.WriteLine(selectedPrompt);
+        return selectedPrompt;
     }
 }
