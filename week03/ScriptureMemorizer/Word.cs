@@ -1,6 +1,6 @@
 using System;
 
-class Word(string text)
+public class Word(string text)
 {
     private string _text;
     private bool _isHidden;
@@ -17,7 +17,7 @@ class Word(string text)
 
     public bool IsHidden()
     {
-        
+        return true;
     }
 
     public string GetDisplayText()

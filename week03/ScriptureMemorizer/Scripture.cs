@@ -4,11 +4,14 @@ class Scripture
 {
     private Reference _reference;
 
-    private List<Word> words;
+    private List<Word> words = new List<Word>
+    {
+        
+    };
 
     public Scripture(string text, Reference reference)
     {
-
+        _reference = reference;
     }
 
     public void HideRandomWords(int numberToHide)
@@ -18,11 +21,12 @@ class Scripture
 
     public string GetDisplayText()
     {
-        return "";
+        string text = $"***text here***{words}\n {_reference}";
+        return text;
     }
 
     public bool IsCompletelyHidden()
     {
-
+        return false;
     }
 }
